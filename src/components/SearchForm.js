@@ -14,8 +14,8 @@ const SearchForm = ({ setSearch, initialPlaceholder }) => {
  }
 
  return (
-   <form className="container search-form" onSubmit={onSubmit}>
-     <input type="text" value={query} onChange={onChange} />
+   <form class="form-inline" className="container search-form" onSubmit={onSubmit} class="form-control mr-sm" type="search" >
+     <input type="text" value={query} onChange={onChange}  placeholder="Enter Main Ingredient" aria-label="Search" class="form-inline form-control mr-sm-2"  aria-label="Search"/>
    </form>
  );
 };

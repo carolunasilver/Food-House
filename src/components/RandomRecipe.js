@@ -22,7 +22,7 @@ const RandomRecipe = () => {
       console.log(random);
 
     return (
-        <div>
+<div class="jumbotron">
             <h1>{random.meals.strMeal}</h1>
             <p>Category: {random.meals.strCategory}</p>
             <img src={random.meals.strMealThumb} alt={random.meals.strMeal} ></img>

@@ -1,8 +1,10 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import SearchForm from './components/SearchForm'
 import DishCard from './components/DishCard'
+import Navbar from 'react-bootstrap/Navbar'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,7 +18,7 @@ import DishDetails from './components/DishDetails'
 const FoodHouse = () => {
 
   const [data, setData] = useState({ hits: [] })
-  const [search, setSearch] = useState('chicken')
+  const [search, setSearch] = useState('')
 
   const fetchData = async () => {
     const result = await axios(
@@ -32,21 +34,18 @@ const FoodHouse = () => {
 
   console.log(data);
 
+
   
   return (
-    <Router>
+  <Router>
       <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About Food House</Link>
-          </li>
-          <li>
-            <Link to="/random">Recipe of the Day</Link>
-          </li>
-        </ul>
+       <nav class="navbar navbar-dark bg-dark">
+       <Navbar.Brand as={Link} to="/" >FoodHouse</Navbar.Brand>
+          <a class="navbar-brand"><Link to="/">Home</Link></a>
+          <a class="navbar-brand"><Link to="/about">About Food House</Link></a>
+          <a class="navbar-brand"><Link to="/random">Recipe of the Day</Link></a>
+          <SearchForm setSearch={setSearch} initialPlaceholder={search } />
+        </nav>
         <Switch>
          <Route path="/about">
            <About />
@@ -56,7 +55,7 @@ const FoodHouse = () => {
          </Route>
          <Route path="/:id" component={DishDetails} />
          <Route exact path="/">
-         <SearchForm setSearch={setSearch} initialPlaceholder={search} />
+
 
          <div className="container">
               {data.hits && data.hits.length
