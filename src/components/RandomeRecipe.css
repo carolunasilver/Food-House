@@ -1,0 +1,16 @@
+.randomImg{
+    border-radius: 10px;
+    height: 400px;
+    width: 425px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+.dishStyle {
+    height: auto;
+    margin: 0px;
+}
+
+h2 {
+    margin-left: 100px;
+}

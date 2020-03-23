@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://pizza-zdice.cz/wp-content/uploads/2018/05/pizza-zdice-background-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 1800px 1200px;
 }
 
 code {

@@ -1,8 +1,15 @@
 .card {
     float: left;
-    max-width: 10rem;
-    height: 17rem;
-    margin: 0.5rem;
+    max-width: 16rem;
+    height: 23rem;
+    margin: 0.3rem;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #343a40;
+    text-align: center;
   }
- 
+
+ .card-img-top {
+    border-radius: 10px;
+  }
